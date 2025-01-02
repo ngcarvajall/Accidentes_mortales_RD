@@ -8,7 +8,7 @@ from scipy.stats import chi2_contingency
 from sklearn.preprocessing import RobustScaler, MinMaxScaler, Normalizer, StandardScaler
 
 
-def exploracion_dataframe(dataframe, columna_control):
+def exploracion_dataframe(dataframe):
     """
     Realiza un análisis exploratorio básico de un DataFrame, mostrando información sobre duplicados,
     valores nulos, tipos de datos, valores únicos para columnas categóricas y estadísticas descriptivas
@@ -210,21 +210,35 @@ def plot_categoricas(dataframe, paleta="bright", tamano_grafica=(15, 8)):
     Grafica la distribución de las variables categóricas del DataFrame.
 
     Parameters:
-    - color (str, opcional): El color a utilizar en las gráficas. Por defecto es "grey".
-    - tamaño_grafica (tuple, opcional): El tamaño de la figura de la gráfica. Por defecto es (15, 5).
+    - dataframe (DataFrame): El DataFrame con las variables categóricas.
+    - paleta (str, opcional): La paleta de colores a utilizar en las gráficas. Por defecto es "bright".
+    - tamano_grafica (tuple, opcional): El tamaño de la figura de la gráfica. Por defecto es (15, 8).
     """
-    # dataframe_cat = self.separar_dataframe()[1]
-    _, axes = plt.subplots(2, math.ceil(len(dataframe.columns) / 2), figsize=tamano_grafica)
-    axes = axes.flat
+    # Calcular la disposición de los subgráficos
+    num_columnas = len(dataframe.columns)
+    filas = 2
+    columnas = math.ceil(num_columnas / filas)
+    
+    fig, axes = plt.subplots(filas, columnas, figsize=tamano_grafica)
+    axes = axes.flatten()
+
     for indice, columna in enumerate(dataframe.columns):
-        sns.countplot(x=columna, data=dataframe, order=dataframe[columna].value_counts().index,
-                        ax=axes[indice], palette=paleta)
-        axes[indice].tick_params(rotation=0)
-        axes[indice].set_title(columna)
-        axes[indice].set(xlabel=None)
+        sns.countplot(
+            x=columna, 
+            data=dataframe, 
+            order=dataframe[columna].value_counts().index,
+            ax=axes[indice], 
+            palette=paleta
+        )
+        axes[indice].tick_params(axis='x', rotation=90)  # Rotar etiquetas del eje X
+        axes[indice].set_title(columna, fontsize=12)
+        axes[indice].set(xlabel=None, ylabel=None)
+
+    # Eliminar subgráficos vacíos
+    for i in range(num_columnas, len(axes)):
+        fig.delaxes(axes[i])
 
     plt.tight_layout()
-    plt.xticks(rotation=45)
 
 def relacion_vr_numericas_problema_categorico(df, vr):
     df_num, df_cat = separar_dataframes(df)
