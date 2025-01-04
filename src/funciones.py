@@ -503,3 +503,48 @@ def escalar_columnas_metodo(df, columnas_numericas, metodo_escalador):
     # Aplicar el escalado directamente a las columnas originales
     df[columnas_numericas] = scaler.fit_transform(df[columnas_numericas])
     return df
+
+import math
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+import math
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+def plot_top_numericas(dataframe, columna_categoria, top_n=10, figsize=(10, 8)):
+    """
+    Plotea gráficos de barras para las columnas numéricas del DataFrame,
+    mostrando el top_n valores más altos de cada columna numérica.
+
+    Parameters:
+    - dataframe (pd.DataFrame): DataFrame con los datos.
+    - columna_categoria (str): Nombre de la columna categórica a usar en el eje Y (ejemplo: Provincia).
+    - top_n (int): Número de filas principales a incluir según cada columna numérica.
+    - figsize (tuple): Tamaño de la figura de los gráficos de barras.
+    """
+    # Seleccionar solo las columnas numéricas
+    cols_numericas = dataframe.select_dtypes(include='number').columns
+    num_filas = math.ceil(len(cols_numericas) / 2)
+    
+    # Crear subgráficos
+    fig, axes = plt.subplots(nrows=num_filas, ncols=2, figsize=figsize)
+    axes = axes.flat
+
+    for indice, columna in enumerate(cols_numericas):
+        # Ordenar el DataFrame por la columna actual y tomar el top_n
+        top_dataframe = dataframe.sort_values(by=columna, ascending=False).head(top_n)
+
+        # Crear un gráfico de barras con columna_categoria en el eje Y
+        sns.barplot(y=columna_categoria, x=columna, data=top_dataframe, ax=axes[indice], palette='viridis')
+        axes[indice].set_title(f'Top {top_n} - {columna}')
+        axes[indice].set_xlabel('')
+        axes[indice].set_ylabel(columna_categoria)
+    
+    # Eliminar gráficos vacíos si el número de columnas numéricas es impar
+    if len(cols_numericas) % 2 != 0:
+        fig.delaxes(axes[-1])
+
+    plt.tight_layout()
+    plt.show()
+
