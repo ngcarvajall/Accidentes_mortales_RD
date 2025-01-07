@@ -1,0 +1,30 @@
+,Valor,Significado
+0,1,Automóvil (carro)
+1,2,"Motocicleta, ciclomotor (passola)"
+2,3,Camioneta
+3,4,Camión
+4,5,Autobús
+5,6,"Minibús, miniván"
+6,7,Patana
+7,8,"Yipeta, yip"
+8,9,Bicicleta
+9,10,Tractor
+10,11,Grúa
+11,12,Triciclo
+12,13,Furgoneta
+13,14,Excavadora
+14,15,Carreta
+15,16,Ambulancia
+16,17,Pala mecánica
+17,18,Locomotora
+18,19,Rodillo
+19,20,Volqueta
+20,21,Volteo
+21,22,Gredar
+22,23,Máquina asfaltadora
+23,24,Animal
+24,25,Peatón atropellado
+25,26,Otros
+26,27,Vehículo le cayó encima
+27,28,No aplica
+28,99,No declarado

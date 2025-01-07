@@ -1,0 +1,19 @@
+,0,1,2
+0,Valor,,
+1,Atributos estándar,Etiqueta,Tipo de vía
+2,Formato,F2,
+3,Valores válidos,1,Autopista
+4,2,Avenida,
+5,3,Calle,
+6,4,Carretera,
+7,5,Elevado,
+8,6,Tunel,
+9,7,Puente,
+10,8,Vía férrea,
+11,9,Autovía,
+12,10,Bulevar,
+13,11,Cruce,
+14,12,Camino vecinal,
+15,13,Otras,
+16,99,No declarada,
+17,,,
