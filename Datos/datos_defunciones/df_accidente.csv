@@ -1,14 +1,10 @@
-,0,1,2
-0,Valor,,
-1,Atributos estándar,Etiqueta,Tipo de accidente
-2,Formato,F1,
-3,Valores válidos,1,Choque o colisión
-4,2,Vuelco o vuelcadura,
-5,3,Atropellamiento,
-6,4,Caída,
-7,5,Deslizamiento,
-8,6,Estrellamiento,
-9,7,Aplastamiento,
-10,8,Otros,
-11,9,No declarado,
-12,,,
+,Valor,Significado
+0,1,Choque o colisión
+1,2,Vuelco o vuelcadura
+2,3,Atropellamiento
+3,4,Caída
+4,5,Deslizamiento
+5,6,Estrellamiento
+6,7,Aplastamiento
+7,8,Otros
+8,9,No declarado

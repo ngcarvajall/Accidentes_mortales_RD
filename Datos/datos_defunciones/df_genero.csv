@@ -1,8 +1,4 @@
-,0,1,2
-0,Valor,,
-1,Atributos estándar,Etiqueta,Sexo
-2,Formato,F1,
-3,Valores válidos,1,Hombres
-4,2,Mujeres,
-5,9,No declarado,
-6,,,
+,Valor,Significado
+0,1,Hombres
+1,2,Mujeres
+2,9,No declarado
