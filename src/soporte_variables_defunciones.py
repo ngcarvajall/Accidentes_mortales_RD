@@ -119,24 +119,6 @@ query_creacion_defunciones = """
 
 """
 
-# # # # #
-query_creacion_caracteristicas = ''' #esta es que se alimenta de otras
-    CREATE TABLE IF NOT EXISTS caracteristicas (
-        id_contenido VARCHAR,
-        guion VARCHAR,
-        anio INT,
-        mes VARCHAR,
-        duracion VARCHAR,
-        calificacion FLOAT,
-        argumento VARCHAR,
-        FOREIGN KEY (id_contenido) REFERENCES contenido(id_contenido)
-            ON UPDATE CASCADE
-            ON DELETE CASCADE
-    );
-'''
-
-
-
 # --------- Inserción ---------
 
 query_inser_region = '''
@@ -200,3 +182,12 @@ query_inser_defunciones = '''
     id_medio_trans)
     values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
 '''
+
+# --------- Llamada ---------
+
+query_EDA_1 = """
+            SELECT fecha, count(*) AS casos_defunciones
+FROM defunciones d
+GROUP BY fecha
+ORDER BY fecha ;
+"""
