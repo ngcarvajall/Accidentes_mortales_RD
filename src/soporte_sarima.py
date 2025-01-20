@@ -201,6 +201,28 @@ class SARIMAModel:
         self.best_model = None
         self.best_params = None
 
+
+    def predict(self, start, end):
+        """
+        Realiza predicciones usando el mejor modelo SARIMA seleccionado.
+
+        Args:
+            start (str or pd.Timestamp): Fecha de inicio de la predicción.
+            end (str or pd.Timestamp): Fecha de fin de la predicción.
+
+        Returns:
+            pd.Series: Predicciones realizadas por el modelo en el rango dado.
+        """
+        if self.best_model is None:
+            raise ValueError("No se ha ajustado ningún modelo aún. Llama a 'evaluar_modelos' primero.")
+
+        modelo = self.best_model["modelo"]
+        try:
+            predicciones = modelo.predict(start=start, end=end)
+            return pd.Series(predicciones)
+        except Exception as e:
+            raise ValueError(f"Error durante la predicción: {e}")
+
     def generar_parametros(self, p_range, q_range, seasonal_order_ranges):
         """
         Genera combinaciones de parámetros SARIMA de forma automática.
