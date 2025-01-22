@@ -161,6 +161,12 @@ El análisis muestra que las motocicletas son el medio de transporte más involu
 ## **Conclusión**
 El análisis refleja un crecimiento sostenido del parque vehicular, con **motocicletas** liderando las categorías debido a su asequibilidad y funcionalidad. La **concentración geográfica** destaca la Región Ozama como la principal área vehicular, mientras que las tendencias por décadas evidencian un rápido incremento en la última década.
 
+# Crecimiento de la Población y Tasa de Crecimiento
+
+La población total muestra un crecimiento continuo a lo largo del tiempo. En la década de 1960, apenas superaba los **3 millones de habitantes**, y en 60 años casi logró **cuatriplicarse**.
+
+Sin embargo, la **tasa de crecimiento** presenta una tendencia descendente. Aunque la población sigue aumentando, el porcentaje de crecimiento disminuye debido a que se calcula sobre una base poblacional cada vez mayor. Este efecto se ve acentuado por factores como la disminución en las tasas de natalidad, el aumento de la mortalidad y los movimientos migratorios.
+
 
 Posibles soluciones:
 - Licencia de conducir con sistema de puntos
@@ -168,55 +174,62 @@ Posibles soluciones:
 - Vehículos privados que se puedan compartir
 - Facilidades para el transporte en medios alternativos
 
-Modelos para Defunciones:
-    Modelo 1:
-        Usando los parámetros 4,0,3 las métricas fueron:
-        MAE para toda la serie: 16.033110000266465
-        MAPE para toda la serie: 10.87%
-        RMSE para toda la serie: 20.194327031630078
+# Comparativa de Modelos
 
-    Modelo 2:
-        Usando los parámetros 3,0,4 las métricas fueron:
-        MAE para toda la serie: 16.003515060683387
-        MAPE para toda la serie: 10.84%
-        RMSE para toda la serie: 20.224257761783214
+## Modelos para Defunciones
+1. **Modelo 1 (ARIMA: p=4, d=0, q=3)**  
+   - **MAE**: 16.0331  
+   - **MAPE**: 10.87%  
+   - **RMSE**: 20.1943  
 
-    Modelo 3: 
-        Con prophet fueron:
-        MAE: 16.811434077383815
-        MAPE: 11.77%
-        RMSE: 21.806114837171673
+2. **Modelo 2 (ARIMA: p=3, d=0, q=4)**  
+   - **MAE**: 16.0035  
+   - **MAPE**: 10.84%  
+   - **RMSE**: 20.2243  
 
-    Considerando los resultados, el mejor modelo resulta ser el que usa los parámetros 3,0,4
+3. **Modelo 3 (Prophet)**  
+   - **MAE**: 16.8114  
+   - **MAPE**: 11.77%  
+   - **RMSE**: 21.8061  
 
-Modelos para parque vehicular: evidentemente, Prophet es el mejor modelo
-    Usando los mejores parámetros p=5, d=1, q=3
-    MAE para toda la serie: 119967.95088712312
-    MAPE para toda la serie: 3.65%
-    RMSE para toda la serie: 180981.4978466559
+**Conclusión**: El mejor modelo para defunciones es el ARIMA con parámetros **p=3, d=0, q=4**.
 
-    Usando los mejores parámetros p=3, d=1, q=2
-    MAE para toda la serie: 63495.53548481269
-    MAPE para toda la serie: 2.33%
-    RMSE para toda la serie: 78715.83667445996
+---
 
-    Con prophet:
-    MAE: 27953.415849852558
-    MAPE: 1.20%
-    RMSE: 35695.90172282073
+## Modelos para Parque Vehicular
+1. **Modelo 1 (ARIMA: p=5, d=1, q=3)**  
+   - **MAE**: 119,967.95  
+   - **MAPE**: 3.65%  
+   - **RMSE**: 180,981.50  
 
-Modelos para población: mejor modelo Prophet
-    Usando los mejores parámetros p=1, d=2, q=1
-    MAE para toda la serie: 31798.67148193125
-    MAPE para toda la serie: 0.35%
-    RMSE para toda la serie: RMSE: 54728.29433477469
+2. **Modelo 2 (ARIMA: p=3, d=1, q=2)**  
+   - **MAE**: 63,495.54  
+   - **MAPE**: 2.33%  
+   - **RMSE**: 78,715.84  
 
-        Usando los mejores parámetros p=2, d=1, q=6
-    MAE para toda la serie: 7706.726807517435
-    MAPE para toda la serie: 0.11%
-    RMSE para toda la serie: 9764.193038815703
+3. **Modelo 3 (Prophet)**  
+   - **MAE**: 27,953.42  
+   - **MAPE**: 1.20%  
+   - **RMSE**: 35,695.90  
 
-    Con Prophet:
-        MAE para toda la serie: 2742.6311766910076
-        MAPE para toda la serie: 0.03%
-        RMSE para toda la serie: 5247.101222229977
+**Conclusión**: El mejor modelo para parque vehicular es **Prophet**.
+
+---
+
+## Modelos para Población
+1. **Modelo 1 (ARIMA: p=1, d=2, q=1)**  
+   - **MAE**: 31,798.67  
+   - **MAPE**: 0.35%  
+   - **RMSE**: 54,728.29  
+
+2. **Modelo 2 (ARIMA: p=2, d=1, q=6)**  
+   - **MAE**: 7,706.73  
+   - **MAPE**: 0.11%  
+   - **RMSE**: 9,764.19  
+
+3. **Modelo 3 (Prophet)**  
+   - **MAE**: 2,742.63  
+   - **MAPE**: 0.03%  
+   - **RMSE**: 5,247.10  
+
+**Conclusión**: El mejor modelo para población es **Prophet**.
