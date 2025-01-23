@@ -7,7 +7,6 @@ import numpy as np
 from scipy.stats import chi2_contingency
 from sklearn.preprocessing import RobustScaler, MinMaxScaler, Normalizer, StandardScaler
 
-
 def exploracion_dataframe(dataframe):
     """
     Realiza un análisis exploratorio básico de un DataFrame, mostrando información sobre duplicados,
@@ -46,24 +45,47 @@ def exploracion_dataframe(dataframe):
         print(f"La columna {col} tiene los siguientes valores únicos:")
         display(pd.DataFrame(dataframe[col].value_counts()))    
     
-def relacion_vr_categoricas(dataframe, variable_respuesta, paleta = 'bright', tamaño_graficas = (15,10)):
+def relacion_vr_categoricas(dataframe, variable_respuesta, paleta='bright', tamaño_graficas=(15, 10)):
+    """
+    Genera gráficos de barras para explorar la relación entre variables categóricas y una variable numérica de respuesta.
+
+    Params:
+    - dataframe (pd.DataFrame): El DataFrame que contiene los datos a analizar.
+    - variable_respuesta (str): El nombre de la columna numérica que se usará como variable respuesta.
+    - paleta (str, opcional): Paleta de colores a utilizar en los gráficos. Por defecto es 'bright'.
+    - tamaño_graficas (tuple, opcional): Tamaño de las gráficas en formato (ancho, alto). Por defecto es (15, 10).
+
+    Returns:
+    - None: La función muestra gráficos de barras y despliega los cinco primeros valores del DataFrame agrupado para cada variable categórica.
+    """
     df_cat = separar_dataframe(dataframe)[1]
     cols_categoricas = df_cat.columns
     num_filas = math.ceil(len(cols_categoricas) / 2)
-    fig, axes = plt.subplots(nrows = num_filas, ncols = 2, figsize = tamaño_graficas)
+    fig, axes = plt.subplots(nrows=num_filas, ncols=2, figsize=tamaño_graficas)
     axes = axes.flat
 
     for indice, columna in enumerate(cols_categoricas):
-        datos_agrupados = dataframe.groupby(columna)[variable_respuesta].mean().reset_index().sort_values(variable_respuesta, ascending= False)
+        datos_agrupados = (
+            dataframe.groupby(columna)[variable_respuesta]
+            .mean()
+            .reset_index()
+            .sort_values(variable_respuesta, ascending=False)
+        )
         display(datos_agrupados.head())
-        sns.barplot(x=columna,
-                    y = variable_respuesta,
-                    data=datos_agrupados,
-                    ax= axes[indice], 
-                    palette=paleta)
-        axes[indice].tick_params(rotation = 45)
-        axes[indice].set_title(f'Relacion entre {columna} y {variable_respuesta}')
+        sns.barplot(
+            x=columna,
+            y=variable_respuesta,
+            data=datos_agrupados,
+            ax=axes[indice],
+            palette=paleta,
+        )
+        axes[indice].tick_params(rotation=45)
+        axes[indice].set_title(f'Relación entre {columna} y {variable_respuesta}')
         axes[indice].set_xlabel('')
+    
+    plt.tight_layout()
+    plt.show()
+
 
 def relacion_numericas(dataframe, variable_respuesta, paleta = 'bright', tamaño_graficas = (15,10)):
     numericas = separar_dataframes(dataframe)[0]
@@ -504,13 +526,6 @@ def escalar_columnas_metodo(df, columnas_numericas, metodo_escalador):
     df[columnas_numericas] = scaler.fit_transform(df[columnas_numericas])
     return df
 
-import math
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-import math
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 def plot_top_numericas(dataframe, columna_categoria, top_n=10, figsize=(10, 8)):
     """
@@ -548,3 +563,87 @@ def plot_top_numericas(dataframe, columna_categoria, top_n=10, figsize=(10, 8)):
     plt.tight_layout()
     plt.show()
 
+def consulta_accidentes_interactiva(data):
+    """
+    Consulta interactiva de los tipos de accidente por región o provincia, solicitando datos al usuario.
+
+    Args:
+        data (pd.DataFrame): DataFrame con los datos de accidentes.
+
+    Returns:
+        pd.DataFrame: DataFrame con la cantidad de accidentes agrupados por tipo, ordenados de mayor a menor.
+    """
+    # Solicitar inputs al usuario
+    region = input("Ingresa la región, ejemplo: 'Región Ozama'(o presiona Enter para omitir): ").strip()
+    provincia = input("Ingresa la provincia, ejemplo: 'Santo Domingo (o presiona Enter para omitir): ").strip()
+    anio = input("Ingresa el año entre 2005 - 2023(o presiona Enter para omitir): ").strip()
+
+    # Filtrado inicial
+    filtro = data.copy()
+    if region:
+        filtro = filtro[filtro['region'] == region]
+    if provincia:
+        filtro = filtro[filtro['provincia'] == provincia]
+    if anio:  # Convertir año a número si se proporciona
+        anio = int(anio)
+        filtro = filtro[filtro['anio'] == anio]
+
+    # Agrupar por tipo de accidente y contar
+    resultado = filtro.groupby('tipo_accidente').size().reset_index(name='cantidad')
+    resultado = resultado.sort_values(by='cantidad', ascending=False)  # Orden descendente
+    return resultado
+
+def comparar_accidentes_interactiva(data):
+    """
+    Compara interactivamente los tipos de accidente entre dos regiones o provincias, solicitando datos al usuario.
+
+    Args:
+        data (pd.DataFrame): DataFrame con los datos de accidentes.
+
+    Returns:
+        pd.DataFrame: DataFrame con la comparación de accidentes por tipo entre las regiones o provincias, ordenados de mayor a menor.
+    """
+    # Solicitar inputs al usuario
+    region1 = input("Ingresa la primera región (o presiona Enter para omitir): ").strip()
+    provincia1 = input("Ingresa la primera provincia (o presiona Enter para omitir): ").strip()
+    region2 = input("Ingresa la segunda región (o presiona Enter para omitir): ").strip()
+    provincia2 = input("Ingresa la segunda provincia (o presiona Enter para omitir): ").strip()
+    anio = input("Ingresa el año (o presiona Enter para omitir): ").strip()
+
+    # Validar inputs
+    if not region1 and not provincia1:
+        raise ValueError("Debes proporcionar al menos una región o provincia para la primera comparación.")
+    if not region2 and not provincia2:
+        raise ValueError("Debes proporcionar al menos una región o provincia para la segunda comparación.")
+
+    # Filtrar datos según los inputs
+    if region1:
+        filtro1 = data[data['region'] == region1]
+    else:
+        filtro1 = data[data['provincia'] == provincia1]
+
+    if region2:
+        filtro2 = data[data['region'] == region2]
+    else:
+        filtro2 = data[data['provincia'] == provincia2]
+
+    if anio:  # Filtrar por año si se proporciona
+        anio = int(anio)
+        filtro1 = filtro1[filtro1['anio'] == anio]
+        filtro2 = filtro2[filtro2['anio'] == anio]
+
+    # Agrupar por tipo de accidente y contar
+    resultado1 = filtro1.groupby('tipo_accidente').size().reset_index(name=f'{region1 or provincia1}')
+    resultado2 = filtro2.groupby('tipo_accidente').size().reset_index(name=f'{region2 or provincia2}')
+
+    # Combinar los resultados en un único DataFrame para comparación
+    comparacion = pd.merge(resultado1, resultado2, on='tipo_accidente', how='outer').fillna(0)
+
+    # Convertir las columnas de conteo a enteros
+    comparacion.iloc[:, 1:] = comparacion.iloc[:, 1:].astype(int)
+
+    # Ordenar el DataFrame combinado en orden descendente por la suma de las columnas de accidentes
+    comparacion['total'] = comparacion.iloc[:, 1:].sum(axis=1)  # Crear una columna temporal de suma total
+    comparacion = comparacion.sort_values(by='total', ascending=False).drop(columns=['total'])  # Orden descendente y eliminar columna temporal
+
+    return comparacion
