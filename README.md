@@ -167,13 +167,6 @@ La población total muestra un crecimiento continuo a lo largo del tiempo. En la
 
 Sin embargo, la **tasa de crecimiento** presenta una tendencia descendente. Aunque la población sigue aumentando, el porcentaje de crecimiento disminuye debido a que se calcula sobre una base poblacional cada vez mayor. Este efecto se ve acentuado por factores como la disminución en las tasas de natalidad, el aumento de la mortalidad y los movimientos migratorios.
 
-
-Posibles soluciones:
-- Licencia de conducir con sistema de puntos
-- Tranporte público de calidad
-- Vehículos privados que se puedan compartir
-- Facilidades para el transporte en medios alternativos
-
 # Comparativa de Modelos
 
 ## Modelos para Defunciones
@@ -233,3 +226,12 @@ Posibles soluciones:
    - **RMSE**: 5,247.10  
 
 **Conclusión**: El mejor modelo para población es **Prophet**.
+
+
+Posibles soluciones:
+- Licencia de conducir con sistema de puntos
+- Tranporte público de calidad
+- Vehículos privados que se puedan compartir
+- Facilidades para el transporte en medios alternativos
+
+Next Steps: una vez ejecutadas distintas medidas o soluciones, hacer un A/B testing para verificar el impacto de estas.

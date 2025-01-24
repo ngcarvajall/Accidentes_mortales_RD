@@ -106,16 +106,49 @@ def relacion_numericas(dataframe, variable_respuesta, paleta = 'bright', tamaño
                     palette=paleta)
     plt.tight_layout()
 
-def matriz_correlacion(dataframe, figsize = (5,3)):
-    matriz_corr = dataframe.corr(numeric_only=True) #matriz correlación
+def matriz_correlacion(dataframe, columnas=None, figsize=(8, 6), cmap='coolwarm', title='Matriz de Correlación'):
+    """
+    Genera y visualiza una matriz de correlación con opciones de personalización.
+
+    Params:
+    - dataframe (pd.DataFrame): DataFrame que contiene los datos.
+    - columnas (list, optional): Lista de columnas específicas para calcular la correlación. Si no se especifica, usa todas las columnas numéricas.
+    - figsize (tuple, optional): Tamaño de la figura (ancho, alto). Default es (8, 6).
+    - cmap (str, optional): Mapa de colores para el heatmap. Default es 'coolwarm'.
+    - title (str, optional): Título de la matriz de correlación. Default es 'Matriz de Correlación'.
+
+    Returns:
+    - None. Muestra el heatmap de correlación.
+    """
+    # Seleccionar columnas específicas si se proporcionan
+    if columnas:
+        matriz_corr = dataframe[columnas].corr()
+    else:
+        matriz_corr = dataframe.corr(numeric_only=True)
+
+    # Crear máscara para la matriz triangular superior
+    mascara = np.triu(np.ones_like(matriz_corr, dtype=bool))
+
+    # Configurar la figura
     plt.figure(figsize=figsize)
-    mascara = np.triu(np.ones_like(matriz_corr, dtype = np.bool_) )
-    sns.heatmap(matriz_corr,
-                annot=True,
-                vmin=-1,
-                vmax=1, 
-                mask=mascara)
+    sns.heatmap(
+        matriz_corr,
+        annot=True,
+        fmt=".2f",
+        cmap=cmap,
+        vmin=-1,
+        vmax=1,
+        mask=mascara,
+        cbar_kws={"shrink": 0.8}
+    )
+
+    # Título y ajustes
+    plt.title(title, fontsize=14)
+    plt.xticks(rotation=45, ha='right', fontsize=10)
+    plt.yticks(rotation=0, fontsize=10)
     plt.tight_layout()
+    plt.show()
+
 
 def detectar_outliers(dataframe, color='red', tamaño_grafica=(15,10)):
     df_num = separar_dataframes(dataframe)[0]
