@@ -64,7 +64,21 @@ query_creacion_propietario = """
 
 """
 
+query_creacion_parqueveh_2023 = """ 
+    CREATE TABLE IF NOT EXISTS parque_veh_2023 (
+    provincia VARCHAR(100) PRIMARY KEY,
+    automoviles int,
+    autobuses int,
+    jeep int,
+    carga int,
+    motocicletas int,
+    volteo int,
+    maquinas_pesadas int,
+    otros int,
+    total int
+    );
 
+"""
 
 # --------- Inserción ---------
 
