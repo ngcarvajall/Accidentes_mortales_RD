@@ -113,6 +113,13 @@ query_inser_propietario = '''
     values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
 '''
 
+query_inser_pveh_2023 = '''
+    INSERT INTO parque_veh_2023 (provincia, automoviles, autobuses,
+    jeep, carga, motocicletas, volteo, maquinas_pesadas,
+    otros, total)
+    values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+'''
+
 # --------- Llamada ---------
 
 query_EDA_1 = """

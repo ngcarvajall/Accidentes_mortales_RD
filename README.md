@@ -49,7 +49,7 @@
   - Santo Domingo.
   - San Cristóbal.
   - Santiago.
-- **Tipo de vía más peligrosa**: Carreteras, seguidas de calles y avenidas.
+- **Tipo de vía más peligrosa**: Carreteras, seguidas de calles y avenidas. En la primera de estas (carreteras) han ocurrido el 44% de las muertes en accidentes de tránsito.
 
 ---
 
