@@ -80,6 +80,14 @@ query_creacion_parqueveh_2023 = """
 
 """
 
+query_creacion_infracciones = """ 
+    CREATE TABLE IF NOT EXISTS infracciones (
+    anio int,
+    infraccion VARCHAR(150),
+    total int
+    );
+
+"""
 # --------- Inserción ---------
 
 query_inser_parque_vehicular_es = '''
@@ -118,6 +126,11 @@ query_inser_pveh_2023 = '''
     jeep, carga, motocicletas, volteo, maquinas_pesadas,
     otros, total)
     values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+'''
+
+query_inser_infracciones = '''
+    INSERT INTO infracciones (anio, infraccion, total)
+    values (%s, %s, %s);
 '''
 
 # --------- Llamada ---------
