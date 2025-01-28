@@ -87,11 +87,23 @@ def relacion_vr_categoricas(dataframe, variable_respuesta, paleta='bright', tama
     plt.show()
 
 
-def relacion_numericas(dataframe, variable_respuesta, paleta = 'bright', tamaño_graficas = (15,10)):
+def relacion_numericas(dataframe, variable_respuesta, paleta='bright', tamaño_graficas=(15, 10)):
+    """
+    Genera gráficos de dispersión para explorar la relación entre variables numéricas y una variable de respuesta.
+
+    Params:
+    - dataframe (pd.DataFrame): El DataFrame que contiene los datos a analizar.
+    - variable_respuesta (str): El nombre de la columna que se usará como variable respuesta.
+    - paleta (str, opcional): Paleta de colores a utilizar en los gráficos. Por defecto es 'bright'.
+    - tamaño_graficas (tuple, opcional): Tamaño de las gráficas en formato (ancho, alto). Por defecto es (15, 10).
+
+    Returns:
+    - None: La función muestra gráficos de dispersión para cada variable numérica en relación con la variable respuesta.
+    """
     numericas = separar_dataframes(dataframe)[0]
     cols_numericas = numericas.columns
     num_filas = math.ceil(len(cols_numericas) / 2)
-    fig, axes = plt.subplots(nrows = num_filas, ncols = 2, figsize = tamaño_graficas)
+    fig, axes = plt.subplots(nrows=num_filas, ncols=2, figsize=tamaño_graficas)
     axes = axes.flat
 
     for indice, columna in enumerate(cols_numericas):
@@ -99,12 +111,20 @@ def relacion_numericas(dataframe, variable_respuesta, paleta = 'bright', tamaño
             fig.delaxes(axes[indice])
             pass
         else:
-            sns.scatterplot(x=columna,
-                    y=variable_respuesta,
-                    data=numericas,
-                    ax=axes[indice], 
-                    palette=paleta)
+            sns.scatterplot(
+                x=columna,
+                y=variable_respuesta,
+                data=numericas,
+                ax=axes[indice],
+                palette=paleta,
+            )
+        axes[indice].set_title(f'Relación entre {columna} y {variable_respuesta}')
+        axes[indice].set_xlabel(columna)
+        axes[indice].set_ylabel(variable_respuesta)
+
     plt.tight_layout()
+    plt.show()
+
 
 def matriz_correlacion(dataframe, columnas=None, figsize=(8, 6), cmap='coolwarm', title='Matriz de Correlación'):
     """
@@ -150,19 +170,36 @@ def matriz_correlacion(dataframe, columnas=None, figsize=(8, 6), cmap='coolwarm'
     plt.show()
 
 
-def detectar_outliers(dataframe, color='red', tamaño_grafica=(15,10)):
+def detectar_outliers(dataframe, color='red', tamaño_grafica=(15, 10)):
+    """
+    Genera gráficos de cajas (boxplots) para detectar outliers en las variables numéricas de un DataFrame.
+
+    Params:
+    - dataframe (pd.DataFrame): El DataFrame que contiene los datos a analizar.
+    - color (str, opcional): Color a utilizar en los boxplots. Por defecto es 'red'.
+    - tamaño_grafica (tuple, opcional): Tamaño de las gráficas en formato (ancho, alto). Por defecto es (15, 10).
+
+    Returns:
+    - None: La función muestra gráficos de cajas para cada variable numérica.
+    """
     df_num = separar_dataframes(dataframe)[0]
-    num_filas= math.ceil(len(df_num.columns)/2)
+    num_filas = math.ceil(len(df_num.columns) / 2)
     fig, axes = plt.subplots(ncols=2, nrows=num_filas, figsize=tamaño_grafica)
     axes = axes.flat
 
-    for indice,columna in enumerate(df_num.columns):
-        sns.boxplot(x=columna,
-                    data=df_num,
-                    ax = axes[indice],
-                    color=color)
+    for indice, columna in enumerate(df_num.columns):
+        sns.boxplot(
+            x=columna,
+            data=df_num,
+            ax=axes[indice],
+            color=color,
+        )
         axes[indice].set_title(f'Outliers de {columna}')
         axes[indice].set_xlabel('')
+
+    plt.tight_layout()
+    plt.show()
+
 
 def plot_outliers_univariados(dataframe, columnas_numericas, tipo_grafica, bins, whis=1.5):
     fig, axes = plt.subplots(nrows=math.ceil(len(columnas_numericas) / 2), ncols=2, figsize= (15,10))
@@ -241,24 +278,64 @@ def visualizar_categoricas(dataframe, lista_col_cat, variable_respuesta, bigote=
         plt.tight_layout()
 
 def separar_dataframes(dataframe):
-    return dataframe.select_dtypes(include = np.number), dataframe.select_dtypes(include = ['O', 'category'])
+    """
+    Separa un DataFrame en dos DataFrames: uno con variables numéricas y otro con variables categóricas.
 
-def plot_numericas(dataframe, figsize=(10,8)):
+    Params:
+    - dataframe (pd.DataFrame): El DataFrame que contiene los datos a analizar.
+
+    Returns:
+    - tuple: 
+        - pd.DataFrame: DataFrame con las columnas numéricas.
+        - pd.DataFrame: DataFrame con las columnas categóricas (incluye objetos y categorías).
+    """
+    return dataframe.select_dtypes(include=np.number), dataframe.select_dtypes(include=['O', 'category'])
+
+def plot_numericas(dataframe, figsize=(10, 8)):
+    """
+    Genera histogramas para todas las columnas numéricas de un DataFrame, incluyendo etiquetas en los valores.
+
+    Params:
+    - dataframe (pd.DataFrame): El DataFrame que contiene las columnas numéricas a graficar.
+    - figsize (tuple, opcional): Tamaño de la figura en formato (ancho, alto). Por defecto es (10, 8).
+
+    Returns:
+    - None: La función genera y muestra histogramas para cada columna numérica, con etiquetas en las barras.
+    """
     cols_numericas = dataframe.columns
     num_filas = math.ceil(len(cols_numericas) / 2)
-    fig, axes = plt.subplots(nrows = num_filas, ncols = 2, figsize = figsize)
+    fig, axes = plt.subplots(nrows=num_filas, ncols=2, figsize=figsize)
     axes = axes.flat
 
     for indice, columna in enumerate(cols_numericas):
-        sns.histplot(x=columna, data=dataframe, ax = axes[indice], bins=50)
-        axes[indice].set_title(columna)
-        axes[indice].set_xlabel('')
+        ax = axes[indice]
+        plot = sns.histplot(
+            x=columna,
+            data=dataframe,
+            ax=ax,
+            bins=50
+        )
+        ax.set_title(columna)
+        ax.set_xlabel('')
+        
+        # Agregar etiquetas en los valores
+        for patch in plot.patches:
+            height = patch.get_height()
+            if height > 0:  # Solo etiqueta si el valor es mayor a 0
+                ax.annotate(
+                    f'{int(height)}',
+                    (patch.get_x() + patch.get_width() / 2, height),
+                    ha='center',
+                    va='bottom',
+                    fontsize=9
+                )
+
     if len(cols_numericas) % 2 != 0:
         fig.delaxes(axes[-1])
-    else:
-        pass
 
     plt.tight_layout()
+    plt.show()
+
 
 def plot_categoricas(dataframe, paleta="bright", tamano_grafica=(15, 8)):
     """
@@ -359,10 +436,6 @@ def plot_relacion(self, vr, tamano_grafica=(40, 12)):
                               palette = "magma"
                               )
                 
-import seaborn as sns
-import matplotlib.pyplot as plt
-import math
-
 def graficar_relaciones_categoricas(dataframe, vr):
     """
     Genera gráficos de barras en un subplot para todas las columnas categóricas
@@ -596,6 +669,99 @@ def plot_top_numericas(dataframe, columna_categoria, top_n=10, figsize=(10, 8)):
     plt.tight_layout()
     plt.show()
 
+def crear_tabla_pivote(dataframe, index, columns, values, aggfunc='count'):
+    """
+    Crea una tabla pivote a partir de un DataFrame.
+
+    Params:
+    - dataframe (pd.DataFrame): El DataFrame de entrada.
+    - index (str): Columna que se usará como índice (filas) en la tabla pivote.
+    - columns (str): Columna que se usará como encabezado de columnas en la tabla pivote.
+    - values (str): Columna cuyos valores se resumirán en la tabla pivote.
+    - aggfunc (str, opcional): Función de agregación para resumir los datos. Por defecto es 'count'.
+
+    Returns:
+    - pd.DataFrame: La tabla pivote generada.
+    """
+    return dataframe.pivot_table(
+        index=index,
+        columns=columns,
+        values=values,
+        aggfunc=aggfunc
+    )
+
+# ----- Funciones consulta ----- #
+
+def consulta_tipo_accidente(df, anio, filtro_columna, filtro_valor):
+    """
+    Consulta los tipos de accidente por año en base a región o provincia.
+
+    Args:
+        df (pd.DataFrame): El DataFrame que contiene los datos.
+        anio (int): Año para filtrar los datos.
+        filtro_columna (str): La columna por la cual filtrar (e.g., 'region' o 'provincia').
+        filtro_valor (str): El valor específico de la columna por el cual filtrar.
+
+    Returns:
+        pd.DataFrame: DataFrame con el conteo de tipos de accidente para el año y filtro especificado.
+    """
+    try:
+        # Filtrar por año
+        df_filtrado = df[df['anio'] == anio]
+
+        # Filtrar por columna (región o provincia)
+        df_filtrado = df_filtrado[df_filtrado[filtro_columna] == filtro_valor]
+
+        # Contar los tipos de accidente
+        resultado = df_filtrado['tipo_accidente'].value_counts().reset_index()
+        resultado.columns = ['Tipo de Accidente', 'Cantidad']
+
+        return resultado
+
+    except KeyError as e:
+        return f"Error: La columna '{filtro_columna}' o 'tipo_accidente' no existe en el DataFrame."
+    except Exception as e:
+        return f"Hubo un error: {str(e)}"
+    
+
+def comparar_tipo_accidente(df, anio, filtro_columna, valor1, valor2):
+    """
+    Compara los tipos de accidente entre dos regiones o provincias para un año específico.
+
+    Args:
+        df (pd.DataFrame): El DataFrame que contiene los datos.
+        anio (int): Año para filtrar los datos.
+        filtro_columna (str): La columna por la cual filtrar (e.g., 'region' o 'provincia').
+        valor1 (str): Primer valor de la columna para comparar.
+        valor2 (str): Segundo valor de la columna para comparar.
+
+    Returns:
+        pd.DataFrame: DataFrame con el conteo de tipos de accidente para cada región o provincia.
+    """
+    try:
+        # Filtrar por año
+        df_filtrado = df[df['anio'] == anio]
+
+        # Filtrar por el primer valor
+        df_valor1 = df_filtrado[df_filtrado[filtro_columna] == valor1]
+        conteo_valor1 = df_valor1['tipo_accidente'].value_counts().reset_index()
+        conteo_valor1.columns = ['Tipo de Accidente', f'Cantidad en {valor1}']
+
+        # Filtrar por el segundo valor
+        df_valor2 = df_filtrado[df_filtrado[filtro_columna] == valor2]
+        conteo_valor2 = df_valor2['tipo_accidente'].value_counts().reset_index()
+        conteo_valor2.columns = ['Tipo de Accidente', f'Cantidad en {valor2}']
+
+        # Combinar los resultados en un solo DataFrame
+        resultado = pd.merge(conteo_valor1, conteo_valor2, on='Tipo de Accidente', how='outer').fillna(0)
+
+        return resultado
+
+    except KeyError as e:
+        return f"Error: La columna '{filtro_columna}' o 'tipo_accidente' no existe en el DataFrame."
+    except Exception as e:
+        return f"Hubo un error: {str(e)}"
+    
 def consulta_accidentes_interactiva(data):
     """
     Consulta interactiva de los tipos de accidente por región o provincia, solicitando datos al usuario.

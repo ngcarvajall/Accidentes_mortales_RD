@@ -10,56 +10,33 @@ query_creacion_defunciones_predict = """
 
 query_creacion_parque_vehicular_predict = """ 
     CREATE TABLE IF NOT EXISTS parque_veh_predict (
-    fecha DATE,
+    anio int,
     predicciones int);
 
 """
 
 query_creacion_poblacion_predict = """ 
     CREATE TABLE IF NOT EXISTS poblacion_predict (
-    fecha DATE,
+    anio int,
     predicciones int);
 
 """
 
 # --------- Inserción ---------
 
-query_inser_parque_vehicular_es = '''
-    INSERT INTO parque_vehicular_es (anio, camiones_furgonetas,
-    autobuses, turismos, motocicletas,
-    tractores, remolques, otros, ciclomotores, total) 
-    values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
-'''
-
-query_inser_defunciones_es = '''
-    INSERT INTO defunciones_es (anio, fallecidos) 
+query_inser_defunciones_predict = '''
+    INSERT INTO defunciones_predict (fecha, predicciones) 
     values (%s, %s);
 '''
 
-query_inser_antiguedad_pveh = '''
-    INSERT INTO antiguedad_pveh_rd (anio, motocicletas, automoviles, 
-    jeeps, carga, autobuses, maquinas_pesadas, volteo,
-    otros, total) 
-    values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+query_inser_parque_vehicular_predict = '''
+    INSERT INTO parque_veh_predict (anio, predicciones) 
+    values (%s, %s);
 '''
 
-query_inser_genero_provincia = '''
-    INSERT INTO vehiculos_genero_provincia (provincia, femenino, masculino, total)
-    values (%s, %s, %s, %s);
-'''
-
-query_inser_propietario = '''
-    INSERT INTO propietario (propietario, motocicletas, automoviles, 
-    jeep, carga, autobuses, maquinas_pesadas, volteo,
-    otros, total)
-    values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
-'''
-
-query_inser_pveh_2023 = '''
-    INSERT INTO parque_veh_2023 (provincia, automoviles, autobuses,
-    jeep, carga, motocicletas, volteo, maquinas_pesadas,
-    otros, total)
-    values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
+query_inser_poblacion_predict = '''
+    INSERT INTO poblacion_predict (anio, predicciones) 
+    values (%s, %s);
 '''
 
 # --------- Llamada ---------
