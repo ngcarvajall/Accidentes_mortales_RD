@@ -846,3 +846,19 @@ def comparar_accidentes_interactiva(data):
     comparacion = comparacion.sort_values(by='total', ascending=False).drop(columns=['total'])  # Orden descendente y eliminar columna temporal
 
     return comparacion
+
+def reemplazar_valores(dataframe, columna, mapeo):
+    """
+    Reemplaza valores en una columna específica de un DataFrame utilizando un diccionario de mapeo.
+
+    Params:
+    - dataframe (DataFrame): El DataFrame donde se aplicarán los cambios.
+    - columna (str): El nombre de la columna en la que se reemplazarán los valores.
+    - mapeo (dict): Un diccionario donde las claves son los valores a reemplazar
+                    y los valores son los nuevos valores.
+
+    Returns:
+    - DataFrame: El DataFrame con los valores reemplazados en la columna especificada.
+    """
+    dataframe[columna] = dataframe[columna].replace(mapeo)
+    return dataframe
