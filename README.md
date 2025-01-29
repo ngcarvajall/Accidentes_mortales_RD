@@ -169,7 +169,7 @@ Sin embargo, la **tasa de crecimiento** presenta una tendencia descendente. Aunq
 
 # Comparativa de Modelos
 
-## Modelos para Defunciones
+## Modelos para Defunciones: para este modelo, partimos con un baseline de 15.14% tomando en cuenta la predicción siguiente como el mes actual
 1. **Modelo 1 (ARIMA: p=4, d=0, q=3)**  
    - **MAE**: 16.0331  
    - **MAPE**: 10.87%  
@@ -185,11 +185,11 @@ Sin embargo, la **tasa de crecimiento** presenta una tendencia descendente. Aunq
    - **MAPE**: 11.77%  
    - **RMSE**: 21.8061  
 
-**Conclusión**: El mejor modelo para defunciones es el ARIMA con parámetros **p=3, d=0, q=4**.
+**Conclusión**: El mejor modelo para defunciones es el ARIMA con parámetros **p=3, d=0, q=4**. Su MAPE es de 10.84%, lo que mejora nuestro baseline. Esto significa que el modelo aporta valor.
 
 ---
 
-## Modelos para Parque Vehicular
+## Modelos para Parque Vehicular: para este modelo, partimos con un baseline de 5.7% tomando en cuenta la predicción siguiente como el año actual.
 1. **Modelo 1 (ARIMA: p=5, d=1, q=3)**  
    - **MAE**: 119,967.95  
    - **MAPE**: 3.65%  
@@ -205,11 +205,11 @@ Sin embargo, la **tasa de crecimiento** presenta una tendencia descendente. Aunq
    - **MAPE**: 1.20%  
    - **RMSE**: 35,695.90  
 
-**Conclusión**: El mejor modelo para parque vehicular es **Prophet**.
+**Conclusión**: El mejor modelo para parque vehicular es **Prophet** con un MAPE de 1.20%. Esto evidentemente mejora nuestro baseline, por lo que el modelo aporta valor.
 
 ---
 
-## Modelos para Población
+## Modelos para Población: para este modelo, partimos con un baseline de 1.1% tomando en cuenta la predicción siguiente como el año actual.
 1. **Modelo 1 (ARIMA: p=1, d=2, q=1)**  
    - **MAE**: 31,798.67  
    - **MAPE**: 0.35%  
@@ -225,7 +225,7 @@ Sin embargo, la **tasa de crecimiento** presenta una tendencia descendente. Aunq
    - **MAPE**: 0.03%  
    - **RMSE**: 5,247.10  
 
-**Conclusión**: El mejor modelo para población es **Prophet**.
+**Conclusión**: El mejor modelo para población es **Prophet** con un MAPE de 0.03%. Esto evidentemente mejora nuestro baseline, por lo que el modelo aporta valor.
 
 
 Posibles soluciones:
