@@ -211,21 +211,23 @@ Sin embargo, la **tasa de crecimiento** presenta una tendencia descendente. Aunq
 
 ## Modelos para Población: para este modelo, partimos con un baseline de 1.1% tomando en cuenta la predicción siguiente como el año actual.
 1. **Modelo 1 (ARIMA: p=1, d=2, q=1)**  
-   - **MAE**: 31,798.67  
-   - **MAPE**: 0.35%  
+   - **MAE**: 50,414.70  
+   - **MAPE**: 0.55%  
    - **RMSE**: 54,728.29  
 
 2. **Modelo 2 (ARIMA: p=2, d=1, q=6)**  
-   - **MAE**: 7,706.73  
-   - **MAPE**: 0.11%  
-   - **RMSE**: 9,764.19  
+   - **MAE**: 26,504.80  
+   - **MAPE**: 0.46%  
+   - **RMSE**: 31,352.87  
 
 3. **Modelo 3 (Prophet)**  
-   - **MAE**: 2,742.63  
+   - **MAE**: 2,831.83  
    - **MAPE**: 0.03%  
-   - **RMSE**: 5,247.10  
+   - **RMSE**: 5,425.27  
 
 **Conclusión**: El mejor modelo para población es **Prophet** con un MAPE de 0.03%. Esto evidentemente mejora nuestro baseline, por lo que el modelo aporta valor.
+
+
 
 
 Posibles soluciones:
