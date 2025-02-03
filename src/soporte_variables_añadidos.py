@@ -88,6 +88,15 @@ query_creacion_infracciones = """
     );
 
 """
+
+query_creacion_comparacion_es = """ 
+    CREATE TABLE IF NOT EXISTS comparacion_modelo (
+    anio int,
+    valor int,
+    tipo VARCHAR(100)
+    );
+
+"""
 # --------- Inserción ---------
 
 query_inser_parque_vehicular_es = '''
@@ -133,6 +142,10 @@ query_inser_infracciones = '''
     values (%s, %s, %s);
 '''
 
+query_inser_comparacion_es = '''
+    INSERT INTO comparacion_modelo (anio, valor, tipo) 
+    values (%s, %s, %s);
+'''
 # --------- Llamada ---------
 
 query_EDA_1 = """
