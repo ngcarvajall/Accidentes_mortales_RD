@@ -189,23 +189,23 @@ Sin embargo, la **tasa de crecimiento** presenta una tendencia descendente. Aunq
 
 ---
 
-## Modelos para Parque Vehicular: para este modelo, partimos con un baseline de 5.7% tomando en cuenta la predicción siguiente como el año actual.
+## Modelos para Parque Vehicular: para este modelo, partimos con un baseline de 5.8% tomando en cuenta la predicción siguiente como el año actual.
 1. **Modelo 1 (ARIMA: p=5, d=1, q=3)**  
-   - **MAE**: 119,967.95  
-   - **MAPE**: 3.65%  
-   - **RMSE**: 180,981.50  
+   - **MAE**: 121,294.07  
+   - **MAPE**: 3.67%  
+   - **RMSE**: 185,251.49  
 
 2. **Modelo 2 (ARIMA: p=3, d=1, q=2)**  
-   - **MAE**: 63,495.54  
-   - **MAPE**: 2.33%  
-   - **RMSE**: 78,715.84  
+   - **MAE**: 64,957.07  
+   - **MAPE**: 2.37%  
+   - **RMSE**: 81,594.16  
 
 3. **Modelo 3 (Prophet)**  
-   - **MAE**: 27,953.42  
-   - **MAPE**: 1.20%  
-   - **RMSE**: 35,695.90  
+   - **MAE**: 30,809.51  
+   - **MAPE**: 1.35%  
+   - **RMSE**: 40,253.78  
 
-**Conclusión**: El mejor modelo para parque vehicular es **Prophet** con un MAPE de 1.20%. Esto evidentemente mejora nuestro baseline, por lo que el modelo aporta valor.
+**Conclusión**: El mejor modelo para parque vehicular es **Prophet** con un MAPE de 1.35%. Esto evidentemente mejora nuestro baseline, por lo que el modelo aporta valor.
 
 ---
 
