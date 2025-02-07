@@ -1,4 +1,4 @@
-![Tasa de Accidentes en RD](fondo.webp)
+![Tasa de Accidentes en RD](img/fondo.webp)
 
 # **Análisis del Parque Vehicular, Mortalidad Vial y Crecimiento Poblacional en República Dominicana**
 
