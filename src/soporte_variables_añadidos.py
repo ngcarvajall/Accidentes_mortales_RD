@@ -97,6 +97,14 @@ query_creacion_comparacion_es = """
     );
 
 """
+
+query_creacion_poblacion_es = """ 
+    CREATE TABLE IF NOT EXISTS poblacion_es (
+    anio int,
+    poblacion int
+    );
+
+"""
 # --------- Inserción ---------
 
 query_inser_parque_vehicular_es = '''
@@ -145,6 +153,11 @@ query_inser_infracciones = '''
 query_inser_comparacion_es = '''
     INSERT INTO comparacion_modelo (anio, valor, tipo) 
     values (%s, %s, %s);
+'''
+
+query_inser_poblacion_es = '''
+    INSERT INTO poblacion_es (anio, poblacion) 
+    values (%s, %s);
 '''
 # --------- Llamada ---------
 
