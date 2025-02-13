@@ -59,7 +59,7 @@ Los hallazgos destacan el rápido crecimiento del parque vehicular en comparaci�
 - **Predicción para 2025:** **6,385,468 vehículos**.
 
 #### **Población (Modelo Prophet)**
-- **MAPE:** **0.03%**.
+- **MAPE:** **0.03%** (mejor que el baseline de 1.1%).
 - **Predicción para 2025:** **11,599,481 habitantes**.
 
 > 🔍 **Insight:** Aunque la mortalidad por vehículos ha disminuido, el número absoluto de muertes sigue siendo alarmante. Se prevé que el parque vehicular continúe en expansión.
