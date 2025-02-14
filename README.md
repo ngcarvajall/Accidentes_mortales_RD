@@ -113,7 +113,6 @@ Los modelos predictivos muestran que la cantidad de defunciones disminuirá lige
 
 ## **Próximos Pasos**
 - **Monitorear el impacto de políticas públicas y nuevas regulaciones.**
-- **Desarrollar dashboards interactivos en Power BI para visualizar tendencias en tiempo real.**
 - **Colaborar con entidades gubernamentales para optimizar estrategias de seguridad vial.**
 
 > 🚀 **Este análisis no solo busca entender el problema, sino también proponer soluciones concretas para salvar vidas.**
