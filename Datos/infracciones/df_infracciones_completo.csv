@@ -1,0 +1,736 @@
+,anio,infracciones,total
+0,2010,violar la luz roja,31531
+1,2010,transitar sin casco,45466
+2,2010,transitar sin cinturon,31331
+3,2010,hablar por celular,29876
+4,2010,via contraria,38764
+5,2010,conducir sin licencia y/o vencida,25880
+6,2010,conducir sin licencia y/o vencida,30342
+7,2010,via contraria,16546
+8,2010,obstruir el transito,24540
+9,2010,estacionarse en lugares prohibidos,17564
+10,2010,giro prohibido,19574
+11,2011,violar la luz roja,43938
+12,2011,transitar sin casco,20561
+13,2011,transitar sin cinturon,42142
+14,2011,hablar por celular,32657
+15,2011,via contraria,37645
+16,2011,conducir sin licencia y/o vencida,15765
+17,2011,conducir sin licencia y/o vencida,31779
+18,2011,via contraria,15456
+19,2011,obstruir el transito,15768
+20,2011,estacionarse en lugares prohibidos,21372
+21,2011,giro prohibido,30733
+22,2012,violar la luz roja,57284
+23,2012,transitar sin casco,23871
+24,2012,transitar sin cinturon,61606
+25,2012,hablar por celular,37324
+26,2012,via contraria,38756
+27,2012,conducir sin licencia y/o vencida,18756
+28,2012,conducir sin licencia y/o vencida,27657
+29,2012,via contraria,13232
+30,2012,obstruir el transito,40655
+31,2012,estacionarse en lugares prohibidos,15676
+32,2012,giro prohibido,23453
+33,2013,violar la luz roja,43929
+34,2013,transitar sin casco,64290
+35,2013,transitar sin cinturon,54102
+36,2013,hablar por celular,28247
+37,2013,via contraria,39987
+38,2013,conducir sin licencia y/o vencida,22647
+39,2013,conducir sin licencia y/o vencida,27657
+40,2013,via contraria,25435
+41,2013,obstruir el transito,44210
+42,2013,estacionarse en lugares prohibidos,14345
+43,2013,giro prohibido,24536
+44,2014,violar la luz roja,66462
+45,2014,transitar sin casco,67628
+46,2014,transitar sin cinturon,65821
+47,2014,hablar por celular,27898
+48,2014,via contraria,40509
+49,2014,conducir sin licencia y/o vencida,21736
+50,2014,conducir sin licencia y/o vencida,32546
+51,2014,via contraria,15678
+52,2014,obstruir el transito,50948
+53,2014,estacionarse en lugares prohibidos,21334
+54,2014,giro prohibido,17869
+55,2015,violar la luz roja,71981
+56,2015,transitar sin casco,122494
+57,2015,transitar sin cinturon,62345
+58,2015,hablar por celular,34567
+59,2015,via contraria,41022
+60,2015,conducir sin licencia y/o vencida,20463
+61,2015,conducir sin licencia y/o vencida,40032
+62,2015,via contraria,21632
+63,2015,obstruir el transito,48598
+64,2015,estacionarse en lugares prohibidos,20145
+65,2015,giro prohibido,18493
+66,2016,violar la luz roja,43917
+67,2016,transitar sin casco,70808
+68,2016,transitar sin cinturon,32709
+69,2016,hablar por celular,18765
+70,2016,via contraria,27962
+71,2016,conducir sin licencia y/o vencida,10536
+72,2016,conducir sin licencia y/o vencida,17656
+73,2016,via contraria,16548
+74,2016,obstruir el transito,21893
+75,2016,estacionarse en lugares prohibidos,25694
+76,2016,giro prohibido,10323
+77,2017,violar la luz roja,62897
+78,2017,transitar sin casco,140033
+79,2017,transitar sin cinturon,53885
+80,2017,hablar por celular,29034
+81,2017,via contraria,40036
+82,2017,conducir sin licencia y/o vencida,16306
+83,2017,conducir sin licencia y/o vencida,29446
+84,2017,via contraria,40036
+85,2017,obstruir el transito,45556
+86,2017,estacionarse en lugares prohibidos,51302
+87,2017,giro prohibido,16702
+88,2018,otros,527
+89,2018,otros,4153
+90,2018,otros,2601
+91,2018,otros,11393
+92,2018,otros,12044
+93,2018,violar la luz roja,61911
+94,2018,otros,8258
+95,2018,transitar sin casco,209670
+96,2018,otros,7060
+97,2018,otros,1202
+98,2018,otros,3174
+99,2018,otros,2576
+100,2018,otros,15072
+101,2018,conducir sin licencia y/o vencida,64565
+102,2018,otros,47822
+103,2018,otros,4732
+104,2018,otros,7958
+105,2018,transitar sin cinturon,72964
+106,2018,otros,15930
+107,2018,otros,15649
+108,2018,otros,16096
+109,2018,otros,3641
+110,2018,otros,657
+111,2018,hablar por celular,30882
+112,2018,giro prohibido,24103
+113,2018,estacionarse en lugares prohibidos,38677
+114,2018,otros,14799
+115,2018,obstruir el transito,29631
+116,2018,via contraria,33762
+117,2018,otros,1358
+118,2018,otros,439
+119,2018,otros,19366
+120,2018,obstruir el transito,777
+121,2018,otros,4894
+122,2018,otros,361
+123,2018,otros,351
+124,2018,otros,639
+125,2018,otros,2171
+126,2018,otros,17184
+127,2018,otros,2009
+128,2018,conducir sin licencia y/o vencida,1872
+129,2019,otros,321
+130,2019,otros,61
+131,2019,otros,660
+132,2019,otros,71
+133,2019,otros,901
+134,2019,otros,6387
+135,2019,otros,3402
+136,2019,otros,4432
+137,2019,otros,42
+138,2019,otros,2583
+139,2019,otros,623
+140,2019,otros,20
+141,2019,otros,61
+142,2019,otros,1979
+143,2019,otros,4759
+144,2019,otros,11039
+145,2019,violar la luz roja,72103
+146,2019,otros,221
+147,2019,otros,227
+148,2019,otros,98
+149,2019,otros,4303
+150,2019,otros,913
+151,2019,otros,2242
+152,2019,otros,15366
+153,2019,otros,245
+154,2019,otros,447
+155,2019,obstruir el transito,27981
+156,2019,otros,353
+157,2019,otros,30
+158,2019,otros,49
+159,2019,otros,33
+160,2019,otros,662
+161,2019,otros,15815
+162,2019,otros,36425
+163,2019,otros,6639
+164,2019,otros,10775
+165,2019,otros,190
+166,2019,otros,19049
+167,2019,otros,217
+168,2019,otros,19218
+169,2019,otros,128
+170,2019,otros,733
+171,2019,otros,1921
+172,2019,otros,2218
+173,2019,otros,183
+174,2019,otros,6145
+175,2019,otros,250
+176,2019,otros,132
+177,2019,otros,594
+178,2019,otros,2338
+179,2019,otros,52
+180,2019,otros,292
+181,2019,otros,42
+182,2019,otros,1818
+183,2019,otros,279
+184,2019,otros,273
+185,2019,otros,309
+186,2019,otros,828
+187,2019,conducir sin licencia y/o vencida,87558
+188,2019,otros,88028
+189,2019,otros,5677
+190,2019,otros,7986
+191,2019,hablar por celular,31518
+192,2019,otros,2477
+193,2019,otros,24
+194,2019,otros,52
+195,2019,otros,45
+196,2019,otros,20
+197,2019,otros,213
+198,2019,otros,282
+199,2019,transitar sin cinturon,57569
+200,2019,otros,286
+201,2019,otros,17718
+202,2019,otros,16212
+203,2019,otros,660
+204,2019,giro prohibido,28875
+205,2019,otros,519
+206,2019,estacionarse en lugares prohibidos,40940
+207,2019,otros,584
+208,2019,otros,85
+209,2019,otros,15
+210,2019,otros,103
+211,2019,otros,2625
+212,2019,otros,7608
+213,2019,otros,89
+214,2019,otros,83
+215,2019,otros,399
+216,2019,transitar sin casco,248639
+217,2019,otros,2220
+218,2019,via contraria,30046
+219,2019,otros,4396
+220,2019,otros,109
+221,2019,otros,80
+222,2019,otros,777
+223,2019,otros,206
+224,2019,otros,28346
+225,2019,otros,32
+226,2019,otros,285
+227,2019,otros,50
+228,2019,otros,860
+229,2019,otros,79
+230,2020,otros,123
+231,2020,otros,65
+232,2020,otros,486
+233,2020,otros,30
+234,2020,otros,323
+235,2020,otros,3782
+236,2020,otros,1606
+237,2020,otros,2219
+238,2020,otros,52
+239,2020,otros,541
+240,2020,otros,244
+241,2020,otros,0
+242,2020,otros,37
+243,2020,otros,2319
+244,2020,otros,5513
+245,2020,violar la luz roja,60072
+246,2020,otros,332
+247,2020,otros,46
+248,2020,otros,1676
+249,2020,otros,2779
+250,2020,otros,376
+251,2020,otros,6103
+252,2020,otros,171
+253,2020,otros,112
+254,2020,otros,2031
+255,2020,otros,116
+256,2020,otros,243
+257,2020,obstruir el transito,19278
+258,2020,otros,160
+259,2020,otros,12
+260,2020,otros,615
+261,2020,otros,99
+262,2020,otros,22532
+263,2020,otros,642
+264,2020,otros,261
+265,2020,otros,10736
+266,2020,otros,244
+267,2020,otros,6880
+268,2020,otros,50
+269,2020,otros,454
+270,2020,otros,93
+271,2020,otros,40
+272,2020,otros,4315
+273,2020,otros,96
+274,2020,otros,58
+275,2020,otros,600
+276,2020,otros,31
+277,2020,otros,69
+278,2020,otros,21
+279,2020,otros,1693
+280,2020,otros,64
+281,2020,otros,265
+282,2020,otros,229
+283,2020,otros,134
+284,2020,conducir sin licencia y/o vencida,35822
+285,2020,otros,45901
+286,2020,otros,419
+287,2020,otros,3898
+288,2020,hablar por celular,16156
+289,2020,otros,808
+290,2020,otros,19
+291,2020,otros,114
+292,2020,otros,60
+293,2020,otros,9
+294,2020,otros,96
+295,2020,otros,147
+296,2020,transitar sin cinturon,31555
+297,2020,otros,178
+298,2020,otros,7440
+299,2020,otros,6832
+300,2020,otros,257
+301,2020,giro prohibido,14730
+302,2020,otros,124
+303,2020,estacionarse en lugares prohibidos,25404
+304,2020,otros,150
+305,2020,otros,13
+306,2020,otros,54
+307,2020,otros,38
+308,2020,otros,36
+309,2020,otros,5060
+310,2020,otros,105
+311,2020,otros,92
+312,2020,otros,141
+313,2020,transitar sin casco,178142
+314,2020,otros,3926
+315,2020,via contraria,21901
+316,2020,otros,5336
+317,2020,otros,197
+318,2020,otros,15
+319,2020,otros,214
+320,2020,otros,9
+321,2020,otros,28458
+322,2020,otros,47
+323,2020,otros,78
+324,2020,otros,133
+325,2020,otros,12
+326,2020,otros,11049
+327,2020,otros,2865
+328,2020,otros,4353
+329,2020,otros,1310
+330,2020,otros,37
+331,2021,otros,227
+332,2021,otros,45
+333,2021,otros,712
+334,2021,otros,82
+335,2021,otros,1363
+336,2021,otros,5082
+337,2021,otros,1484
+338,2021,otros,2534
+339,2021,otros,120
+340,2021,otros,1745
+341,2021,otros,331
+342,2021,otros,134
+343,2021,otros,166
+344,2021,otros,4198
+345,2021,otros,9232
+346,2021,violar la luz roja,160381
+347,2021,otros,587
+348,2021,otros,187
+349,2021,otros,1169
+350,2021,otros,2367
+351,2021,otros,232
+352,2021,otros,22907
+353,2021,otros,101
+354,2021,otros,283
+355,2021,otros,3395
+356,2021,otros,368
+357,2021,otros,469
+358,2021,obstruir el transito,45511
+359,2021,otros,447
+360,2021,otros,41
+361,2021,otros,9248
+362,2021,otros,157
+363,2021,otros,43217
+364,2021,otros,1057
+365,2021,otros,223
+366,2021,otros,28808
+367,2021,otros,168
+368,2021,otros,25400
+369,2021,otros,204
+370,2021,otros,1116
+371,2021,otros,373
+372,2021,otros,302
+373,2021,otros,7175
+374,2021,otros,309
+375,2021,otros,114
+376,2021,otros,3127
+377,2021,otros,57
+378,2021,otros,188
+379,2021,otros,41
+380,2021,otros,1892
+381,2021,otros,56
+382,2021,otros,250
+383,2021,otros,200
+384,2021,otros,294
+385,2021,conducir sin licencia y/o vencida,104497
+386,2021,otros,116138
+387,2021,otros,646
+388,2021,otros,9561
+389,2021,hablar por celular,51606
+390,2021,otros,527
+391,2021,otros,43
+392,2021,otros,131
+393,2021,otros,42
+394,2021,otros,3
+395,2021,otros,279
+396,2021,otros,389
+397,2021,transitar sin cinturon,100229
+398,2021,otros,180
+399,2021,otros,17697
+400,2021,otros,19564
+401,2021,otros,373
+402,2021,giro prohibido,41623
+403,2021,otros,377
+404,2021,estacionarse en lugares prohibidos,42059
+405,2021,otros,245
+406,2021,otros,39
+407,2021,otros,21
+408,2021,otros,154
+409,2021,otros,116
+410,2021,otros,14106
+411,2021,otros,500
+412,2021,otros,96
+413,2021,otros,1687
+414,2021,transitar sin casco,395468
+415,2021,otros,19814
+416,2021,via contraria,39215
+417,2021,otros,10188
+418,2021,otros,382
+419,2021,otros,61
+420,2021,otros,212
+421,2021,otros,44
+422,2021,otros,92496
+423,2021,otros,370
+424,2021,otros,98
+425,2021,otros,541
+426,2021,otros,37
+427,2021,otros,32341
+428,2021,otros,7572
+429,2021,otros,6525
+430,2021,otros,3819
+431,2021,otros,214
+432,2022,otros,231
+433,2022,otros,113
+434,2022,otros,444
+435,2022,otros,118
+436,2022,otros,3132
+437,2022,otros,7393
+438,2022,otros,2594
+439,2022,otros,1879
+440,2022,otros,60
+441,2022,otros,2474
+442,2022,otros,801
+443,2022,otros,123
+444,2022,otros,79
+445,2022,otros,4162
+446,2022,otros,16412
+447,2022,violar la luz roja,178461
+448,2022,otros,743
+449,2022,otros,148
+450,2022,otros,1120
+451,2022,otros,2779
+452,2022,otros,647
+453,2022,otros,24931
+454,2022,otros,936
+455,2022,otros,83
+456,2022,otros,6085
+457,2022,otros,205
+458,2022,otros,3513
+459,2022,obstruir el transito,42895
+460,2022,otros,56
+461,2022,otros,118
+462,2022,otros,6599
+463,2022,otros,48
+464,2022,otros,51465
+465,2022,otros,457
+466,2022,otros,163
+467,2022,otros,41373
+468,2022,otros,600
+469,2022,otros,53237
+470,2022,otros,325
+471,2022,otros,1399
+472,2022,otros,225
+473,2022,otros,188
+474,2022,otros,6396
+475,2022,otros,259
+476,2022,otros,46
+477,2022,otros,4072
+478,2022,otros,57
+479,2022,otros,175
+480,2022,otros,67
+481,2022,otros,2435
+482,2022,otros,119
+483,2022,otros,194
+484,2022,otros,316
+485,2022,otros,482
+486,2022,conducir sin licencia y/o vencida,172724
+487,2022,otros,176513
+488,2022,otros,1233
+489,2022,otros,16666
+490,2022,hablar por celular,72092
+491,2022,otros,468
+492,2022,otros,152
+493,2022,otros,151
+494,2022,otros,169
+495,2022,otros,103
+496,2022,otros,273
+497,2022,otros,582
+498,2022,transitar sin cinturon,144291
+499,2022,otros,686
+500,2022,otros,31175
+501,2022,otros,20858
+502,2022,otros,261
+503,2022,giro prohibido,48219
+504,2022,otros,304
+505,2022,estacionarse en lugares prohibidos,45144
+506,2022,otros,253
+507,2022,otros,60
+508,2022,otros,118
+509,2022,otros,247
+510,2022,otros,249
+511,2022,otros,19397
+512,2022,otros,1407
+513,2022,otros,298
+514,2022,otros,1945
+515,2022,transitar sin casco,447986
+516,2022,otros,23030
+517,2022,via contraria,58488
+518,2022,otros,12885
+519,2022,otros,637
+520,2022,otros,222
+521,2022,otros,335
+522,2022,otros,164
+523,2022,otros,170879
+524,2022,otros,59
+525,2022,otros,86
+526,2022,otros,2916
+527,2022,otros,156
+528,2022,otros,59098
+529,2022,otros,8211
+530,2022,otros,6716
+531,2022,otros,2590
+532,2022,otros,2204
+533,2023,otros,36
+534,2023,otros,57
+535,2023,otros,137
+536,2023,otros,36
+537,2023,otros,3826
+538,2023,otros,5220
+539,2023,otros,1414
+540,2023,otros,2958
+541,2023,otros,39
+542,2023,otros,1552
+543,2023,otros,111
+544,2023,otros,29
+545,2023,otros,33
+546,2023,otros,3401
+547,2023,otros,13504
+548,2023,violar la luz roja,147291
+549,2023,otros,209
+550,2023,otros,114
+551,2023,otros,4380
+552,2023,otros,12002
+553,2023,otros,269
+554,2023,otros,9343
+555,2023,otros,842
+556,2023,otros,63
+557,2023,otros,3029
+558,2023,otros,186
+559,2023,otros,4038
+560,2023,obstruir el transito,26522
+561,2023,otros,135
+562,2023,otros,68
+563,2023,otros,1111
+564,2023,otros,141
+565,2023,otros,34396
+566,2023,otros,1361
+567,2023,otros,173
+568,2023,otros,40679
+569,2023,otros,518
+570,2023,otros,29475
+571,2023,otros,243
+572,2023,otros,444
+573,2023,otros,42
+574,2023,otros,82
+575,2023,otros,4557
+576,2023,otros,272
+577,2023,otros,45
+578,2023,otros,2148
+579,2023,otros,111
+580,2023,otros,151
+581,2023,otros,47
+582,2023,otros,1141
+583,2023,otros,53
+584,2023,otros,168
+585,2023,otros,183
+586,2023,otros,199
+587,2023,conducir sin licencia y/o vencida,113053
+588,2023,otros,114846
+589,2023,otros,6095
+590,2023,otros,15121
+591,2023,hablar por celular,41102
+592,2023,otros,525
+593,2023,otros,123
+594,2023,otros,62
+595,2023,otros,29
+596,2023,otros,35
+597,2023,otros,64
+598,2023,otros,72
+599,2023,transitar sin cinturon,89945
+600,2023,otros,530
+601,2023,otros,26043
+602,2023,otros,13362
+603,2023,otros,336
+604,2023,giro prohibido,31565
+605,2023,otros,215
+606,2023,estacionarse en lugares prohibidos,33419
+607,2023,otros,146
+608,2023,otros,21
+609,2023,otros,6
+610,2023,otros,70
+611,2023,otros,94
+612,2023,otros,18289
+613,2023,otros,2406
+614,2023,otros,298
+615,2023,otros,1466
+616,2023,transitar sin casco,370528
+617,2023,otros,11958
+618,2023,via contraria,43754
+619,2023,otros,16265
+620,2023,otros,421
+621,2023,otros,421
+622,2023,otros,244
+623,2023,otros,184
+624,2023,otros,135340
+625,2023,otros,43
+626,2023,otros,103
+627,2023,otros,396
+628,2023,otros,52
+629,2023,otros,45188
+630,2023,otros,3225
+631,2023,otros,5771
+632,2023,otros,906
+633,2023,otros,697
+634,2024,otros,231
+635,2024,otros,12
+636,2024,otros,169
+637,2024,otros,52
+638,2024,otros,5075
+639,2024,otros,5108
+640,2024,otros,5779
+641,2024,otros,1940
+642,2024,otros,70
+643,2024,otros,2358
+644,2024,otros,260
+645,2024,otros,223
+646,2024,otros,26
+647,2024,otros,3513
+648,2024,otros,8270
+649,2024,violar la luz roja,150901
+650,2024,otros,335
+651,2024,otros,17
+652,2024,otros,953
+653,2024,otros,9888
+654,2024,otros,604
+655,2024,otros,4853
+656,2024,otros,533
+657,2024,otros,138
+658,2024,otros,3112
+659,2024,otros,177
+660,2024,otros,2045
+661,2024,obstruir el transito,28572
+662,2024,otros,68
+663,2024,otros,8
+664,2024,otros,1326
+665,2024,otros,23
+666,2024,otros,75380
+667,2024,otros,2040
+668,2024,otros,162
+669,2024,otros,48984
+670,2024,otros,248
+671,2024,otros,28976
+672,2024,otros,86
+673,2024,otros,507
+674,2024,otros,106
+675,2024,otros,32
+676,2024,otros,4891
+677,2024,otros,224
+678,2024,otros,12
+679,2024,otros,1340
+680,2024,otros,71
+681,2024,otros,181
+682,2024,otros,128
+683,2024,otros,2105
+684,2024,otros,137
+685,2024,otros,53
+686,2024,otros,173
+687,2024,otros,147
+688,2024,conducir sin licencia y/o vencida,173281
+689,2024,otros,193737
+690,2024,otros,5478
+691,2024,otros,17871
+692,2024,hablar por celular,42829
+693,2024,otros,6191
+694,2024,otros,5
+695,2024,otros,75
+696,2024,otros,4
+697,2024,otros,0
+698,2024,otros,89
+699,2024,otros,64
+700,2024,transitar sin cinturon,103156
+701,2024,otros,155
+702,2024,otros,36583
+703,2024,otros,9347
+704,2024,otros,270
+705,2024,giro prohibido,34891
+706,2024,otros,283
+707,2024,estacionarse en lugares prohibidos,45133
+708,2024,otros,119
+709,2024,otros,10
+710,2024,otros,14
+711,2024,otros,64
+712,2024,otros,68
+713,2024,otros,22462
+714,2024,otros,6756
+715,2024,otros,389
+716,2024,otros,1112
+717,2024,transitar sin casco,573078
+718,2024,otros,9672
+719,2024,via contraria,50415
+720,2024,otros,22317
+721,2024,otros,370
+722,2024,otros,1461
+723,2024,otros,285
+724,2024,otros,319
+725,2024,otros,65239
+726,2024,otros,260
+727,2024,otros,65
+728,2024,otros,28582
+729,2024,otros,9
+730,2024,otros,74975
+731,2024,otros,4132
+732,2024,otros,8995
+733,2024,otros,2936
+734,2024,otros,2070
